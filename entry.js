@@ -2,7 +2,7 @@ import { Server } from "socket.io";
 
 const myServer = new Server(3001, {
     cors: {
-        origin: "*",
+        origin: process.env.REACT_APP_CLIENT_URL || "http://localhost:3000",
     }
 });
 
