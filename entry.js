@@ -2,11 +2,11 @@ import { Server } from "socket.io";
 
 const myServer = new Server(8080, {
     cors: {
-        origin: process.env.REACT_APP_CLIENT_URL || "http://localhost:3000",
+        origin: process.env.REACT_APP_CLIENT_URL || "*",
     }
 });
 
-console.log("Tic Tac Toe server is running on port 3001");
+console.log("Tic Tac Toe server is running on port 8080");
 
 const playersConnected = [];
 
